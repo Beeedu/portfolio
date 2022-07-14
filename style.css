@@ -1,0 +1,115 @@
+body {
+    padding: auto;
+}
+
+header {
+    text-align: center;
+}
+
+div {
+    width: auto;
+    padding: 15px;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    max-width: fit-content;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+}
+
+.picture img {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 50%;
+    justify-items: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.contact img {
+    max-height: 30px;
+    max-width: 30px;
+    padding: 5px;
+    color: gray;
+    justify-items: center;
+}
+
+.contact a {
+    color: transparent;
+}
+
+#me  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#intro {
+    max-width: fit-content;
+}
+
+#skills {
+    max-width: fit-content;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-grid {
+    display: grid;
+    max-width: 65%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    row-gap: 5%;
+    align-content: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 100%;
+    justify-self: center;
+    justify-content: space-around;
+}
+
+.project * {
+    padding: 2px;
+    margin: 2px;
+}
+
+.project img {
+    max-height: 100px;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-link {
+    background-color: darkgray;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
