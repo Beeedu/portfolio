@@ -52,8 +52,8 @@ header {
 }
 
 section {
-    margin-top: 0;
-    padding-top: 15em;
+    margin-top: 10em;
+    padding-top: 5em;
 }
 
 #me-section {
@@ -118,7 +118,6 @@ section {
     background-color: darkgrey;
     width: 100%;
     height: 2vh;
-    margin: 0;
     padding: 0;
     border-radius: 0.5em;
 }
@@ -156,7 +155,7 @@ section {
     padding: 10px;
     min-width: 100%;
     justify-self: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .project * {
@@ -185,8 +184,18 @@ section {
     border-width: 1px;
 }
 
+.project-link:hover {
+    background-color: #1ebd95;
+    color: white;
+    transition: background-color 0.25s;
+}
+
 .project {
     text-align: center;
+}
+
+.project:hover {
+    background-image: linear-gradient(#ffffff2f, #ffffff00);
 }
 
 .main-text {
@@ -220,6 +229,7 @@ nav {
     left: 0;
     right: 0;
     padding: 1em;
+    height: 4.5vh;
 }
 
 nav a {
@@ -227,12 +237,14 @@ nav a {
     padding-right: 0.4em;
     text-underline-offset: 10px;
     text-decoration: none;
+    transition: font-size 0.25s;
 }
 
 .nav-focus {
     color: #1ebd95;
-    font-size: 3.5vh;
+    font-size: 3.25vh;
     text-decoration: underline;
+    transition: font-size 0.25s;
 }
 
 .project-links a {

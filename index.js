@@ -8,21 +8,17 @@
 
         window.onscroll = () => {
             let current = "";
-            console.log("scroll");
 
             sections.forEach(section => {
-                console.log("unfocus");
                 const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop) {
+                if (scrollY >= sectionTop - 180) {
                     current = section.getAttribute("id");
                 }
             });
 
             navLinks.forEach(link => {
                 link.classList.remove("nav-focus");
-                console.log("unfocus");
                 if (link.getAttribute("href").substring(1) == current) {
-                    console.log("focus");
                     link.classList.add("nav-focus");
                 }
             });
