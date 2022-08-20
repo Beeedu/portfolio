@@ -1,5 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: auto;
+    background-image: linear-gradient(#141414, #000000 150%);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 header {
@@ -24,8 +32,8 @@ div {
 }
 
 .picture img {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 250px;
+    max-width: 250px;
     border-radius: 50%;
     justify-items: center;
 }
@@ -47,21 +55,90 @@ div {
     color: transparent;
 }
 
-#me  {
+section {
+    margin-top: 10em;
+    padding-top: 5em;
+}
+
+#me-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro {
+    max-width: 60%;
+}
+
+#skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-containers {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    width: 30vw;
+}
+
+.skills-container, .project-grid {
+    background-image: linear-gradient(#1f1f1f, #1f1f1f00);
+    margin: 1em;
+    padding: 2em;
+    border-radius: 0.5em;
+}
+
+.project-grid {
+    margin-bottom: 15em;
+}
+
+.progress-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-#intro {
-    max-width: fit-content;
+.progress-bar > *{
+    margin: 0.3em;
 }
 
-#skills {
-    max-width: fit-content;
+.progress {
+    display: block;
+    background-color: darkgrey;
+    width: 100%;
+    height: 2vh;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.5em;
 }
 
-#projects {
+.progress-fill {
+
+    top: 0;
+    left: 0;
+    color: #1ebd95;
+    width: 300px;
+    height: 2vh;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.5em;
+}
+
+.progress-label {
+    margin-right: 1rem;
+}
+
+#projects-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +157,6 @@ div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lightgray;
     border-radius: 10px;
     padding: 10px;
     min-width: 100%;
@@ -94,7 +170,8 @@ div {
 }
 
 .project img {
-    max-height: 100px;
+    max-width: 90%;
+    border-radius: 0.5em;
 }
 
 .project-links {
@@ -103,7 +180,6 @@ div {
 }
 
 .project-link {
-    background-color: darkgray;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
@@ -112,4 +188,58 @@ div {
     border-color: black;
     border-style: solid;
     border-width: 1px;
+}
+
+.project {
+    text-align: center;
+}
+
+.main-text {
+    color: #c9c9c9;
+    font-family: "Roboto", sans-serif;
+    font-size: 3vh;
+}
+
+.sub-text, .project-link{
+    color: #7d7d7d;
+    font-family: "Roboto", sans-serif;
+    font-size: 2vh;
+}
+
+.name {
+    font-size: 5vh;
+}
+
+.green-color {
+    color: #1ebd95;
+}
+
+.green-bg {
+    background-color: #1ebd95;
+}
+
+nav {
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+}
+
+nav a {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    text-underline-offset: 10px;
+}
+
+.project-links a {
+    color: #c9c9c9;
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    margin: 0;
 }

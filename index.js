@@ -1,0 +1,24 @@
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+
+window.onscroll = () => {
+    let current = "";
+
+    sections.forEach(section => {
+        console.log("unfocus");
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 60) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("nav-focus");
+        console.log("unfocus");
+        if (link.getAttribute("href").substring(1) == current) {
+            console.log("focus");
+            link.classList.add("nav-focus");
+        }
+    });
+};
