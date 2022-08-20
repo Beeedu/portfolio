@@ -14,10 +14,6 @@ header {
     text-align: center;
 }
 
-div {
-    width: auto;
-    padding: 15px;
-}
 
 #profile {
     display: flex;
@@ -56,8 +52,8 @@ div {
 }
 
 section {
-    margin-top: 10em;
-    padding-top: 5em;
+    margin-top: 0;
+    padding-top: 15em;
 }
 
 #me-section {
@@ -67,8 +63,9 @@ section {
     justify-content: center;
 }
 
-#intro {
+.intro {
     max-width: 60%;
+    padding: 2rem;
 }
 
 #skills-section {
@@ -102,10 +99,15 @@ section {
     margin-bottom: 15em;
 }
 
+.progress-bars {
+    padding: 0.5em;
+}
+
 .progress-bar {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.5em;
 }
 
 .progress-bar > *{
@@ -113,7 +115,6 @@ section {
 }
 
 .progress {
-    display: block;
     background-color: darkgrey;
     width: 100%;
     height: 2vh;
@@ -123,15 +124,9 @@ section {
 }
 
 .progress-fill {
-
-    top: 0;
-    left: 0;
     color: #1ebd95;
-    width: 300px;
-    height: 2vh;
-    margin: 0;
-    padding: 0;
-    border-radius: 0.5em;
+    width: 100%;
+    height: 100%;
 }
 
 .progress-label {
@@ -231,6 +226,13 @@ nav a {
     padding-left: 0.4em;
     padding-right: 0.4em;
     text-underline-offset: 10px;
+    text-decoration: none;
+}
+
+.nav-focus {
+    color: #1ebd95;
+    font-size: 3.5vh;
+    text-decoration: underline;
 }
 
 .project-links a {

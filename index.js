@@ -1,24 +1,32 @@
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+(function() {
 
+    window.addEventListener('load', init);
 
-window.onscroll = () => {
-    let current = "";
+    function init() {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav a");
 
-    sections.forEach(section => {
-        console.log("unfocus");
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 60) {
-            current = section.getAttribute("id");
-        }
-    });
+        window.onscroll = () => {
+            let current = "";
+            console.log("scroll");
 
-    navLinks.forEach(link => {
-        link.classList.remove("nav-focus");
-        console.log("unfocus");
-        if (link.getAttribute("href").substring(1) == current) {
-            console.log("focus");
-            link.classList.add("nav-focus");
-        }
-    });
-};
+            sections.forEach(section => {
+                console.log("unfocus");
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("nav-focus");
+                console.log("unfocus");
+                if (link.getAttribute("href").substring(1) == current) {
+                    console.log("focus");
+                    link.classList.add("nav-focus");
+                }
+            });
+        };
+    }
+
+})();
