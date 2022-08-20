@@ -194,6 +194,10 @@ section {
     text-align: center;
 }
 
+.project > a:hover {
+    filter: drop-shadow(0 0 25px #1ebd95)
+}
+
 .project:hover {
     background-image: linear-gradient(#ffffff2f, #ffffff00);
 }
@@ -237,6 +241,11 @@ nav a {
     padding-right: 0.4em;
     text-underline-offset: 10px;
     text-decoration: none;
+    transition: font-size 0.25s;
+}
+
+nav a:hover {
+    font-size: 3.25vh;
     transition: font-size 0.25s;
 }
 
