@@ -11,7 +11,7 @@
 
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 180) {
+                if (scrollY >= sectionTop - 360) {
                     current = section.getAttribute("id");
                 }
             });
