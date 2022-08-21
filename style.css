@@ -1,10 +1,10 @@
 :root {
-    --primary-color-1: black;
-    --primary-color-2: #141414;
-    --primary-color-3: #1f1f1f;
+    --primary-color-1: #1f1f1f;
+    --primary-color-2: #3a3a3a;
+    --primary-color-3: #555555;
     --secondary-color-1: white;
     --secondary-color-2: #c9c9c9;
-    --secondary-color-3: #7d7d7d;
+    --secondary-color-3: #9c9c9c;
     --accent-color: #1ebd95;
     --transparent: #00000000;
 }
@@ -15,7 +15,7 @@ html {
 
 body {
     padding: auto;
-    background-image: linear-gradient(#141414, #000000 150%);
+    background-image: linear-gradient(var(--primary-color-2), var(--primary-color-1) 150%);
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -326,12 +326,10 @@ nav {
     left: 0;
     right: 0;
     padding: 1em;
-    height: 4.5vh;
 }
 
 nav a {
-    padding-left: 0.4em;
-    padding-right: 0.4em;
+    padding: 0.4em;
     text-underline-offset: 10px;
     text-decoration: none;
     transition: font-size 0.25s;
@@ -375,6 +373,7 @@ footer {
 }
 
 #contact-section img {
+    filter: drop-shadow(0 0 100px var(--secondary-color-1));
     max-width: 150px;
     max-height: 150px;
 }
