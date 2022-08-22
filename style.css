@@ -1,9 +1,9 @@
 :root {
     --primary-color-1: #1f1f1f;
-    --primary-color-2: #3a3a3a;
-    --primary-color-3: #555555;
+    --primary-color-2: #303030;
+    --primary-color-3: #4e4e4e;
     --secondary-color-1: white;
-    --secondary-color-2: #c9c9c9;
+    --secondary-color-2: #d3d3d3;
     --secondary-color-3: #9c9c9c;
     --accent-color: #1ebd95;
     --transparent: #00000000;
@@ -261,14 +261,22 @@ section {
 }
 
 .project-link {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-left: 8px;
     padding-right: 16px;
     border-width: 1px;
 
     border: 4px solid var(--accent-color);
     border-radius: 35px;
+}
+
+.project-link img {
+    max-width: 30px;
+    max-height: 30px;
+    margin: 0em 0.3em 0em 0.3em;
 }
 
 .project-link:hover {
@@ -293,6 +301,10 @@ section {
 
 .project:hover {
     background-image: linear-gradient(#ffffff2f, var(--transparent));
+}
+
+.project:hover h2, .project:hover p {
+    color: var(--secondary-color-1);
 }
 
 .main-text {
@@ -354,26 +366,41 @@ footer {
 
 }
 
-#contact-section {
+#contacts-section {
     margin-top: 0;
-    padding: 5em;
+    padding: 10em 10em 7em 10em;
 }
 
-.contact-info {
+.contacts {
     justify-content: left;
-    padding-bottom: 15em;
+    padding-bottom: 10em;
 }
 
-.contact-info p {
+.contacts p {
     color: var(--secondary-color-2);
 }
 
-.contact-info a:hover {
+.contacts a:hover {
     color: var(--accent-color);
 }
+.contacts a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
-#contact-section img {
-    filter: drop-shadow(0 0 100px var(--secondary-color-1));
+.contacts a img {
+    margin: 0.5em;
+}
+
+.contact-link img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+#contacts-section > .animation > img {
+    filter: drop-shadow(0 0 75px var(--secondary-color-1));
     max-width: 150px;
     max-height: 150px;
 }
