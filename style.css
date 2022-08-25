@@ -11,6 +11,8 @@
 
 html {
     scroll-behavior: smooth;
+    min-width: 480px;
+    max-height: none;
 }
 
 body {
@@ -18,6 +20,7 @@ body {
     background-image: linear-gradient(var(--primary-color-2), var(--primary-color-1) 150%);
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
     margin: 0;
 }
 
@@ -80,7 +83,7 @@ section {
     flex-direction: column;
 }
 
-.intro a {
+.intro a, .project-link, .link-button{
     text-decoration: none;
     color: var(--secondary-color-2);
     border: 4px solid var(--accent-color);
@@ -97,12 +100,12 @@ section {
     transition: .15s ease-out;
 }
 
-.intro a:hover {
+.link-button:hover, .project-link:hover{
     background-position: left;
     color: var(--secondary-color-1);
 }
 
-.intro a > img {
+.link-button > img, .project-link > img{
     max-width: 20px;
     margin: 0 0.5em 0 0;
 }
@@ -146,12 +149,19 @@ section {
 
     .project-grid {
         grid-template-columns: 1fr;
+        padding: 0 0 20em 0;
     }
 }
 
 @media screen and (max-width: 800px) {
     .project-grid {
         grid-template-columns: 1fr;
+        padding: 0 0 20em 0;
+    }
+
+    #me-section {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -166,10 +176,9 @@ section {
 
     .project-grid {
         grid-template-columns: 1fr;
+        padding: 0 0 20em 0;
     }
 }
-
-
 
 @media screen and (min-width: 1200px) {
     .skills-grid {
@@ -178,12 +187,7 @@ section {
 
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
+        padding: 0 0 5em 0;
     }
 }
 
@@ -211,7 +215,7 @@ section {
 }
 
 .skill:hover p {
-    color: var(--accent-color);
+    color: var(--secondary-color-1);
 }
 
 .progress-label {
@@ -222,16 +226,13 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5em;
 }
 
 .project-grid {
     display: grid;
     max-width: 70%;
     row-gap: 5%;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 15em;
 }
 
 .project {
@@ -243,6 +244,11 @@ section {
     padding: 10px;
     justify-self: center;
     justify-content: space-between;
+    text-align: center;
+}
+
+.project-link {
+    align-self: center;
 }
 
 .project * {
@@ -252,12 +258,14 @@ section {
 
 .project img {
     max-width: 90%;
+    min-width: none;
     border-radius: 0.5em;
 }
 
 .project-links {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .project-link {
@@ -279,19 +287,9 @@ section {
     margin: 0em 0.3em 0em 0.3em;
 }
 
-.project-link:hover {
-    background-color: var(--accent-color);
-    color: white;
-    transition: background-color 0.25s;
-}
-
 .project-links a {
     color: #c9c9c9;
     text-decoration: none;
-}
-
-.project {
-    text-align: center;
 }
 
 .project > a:hover {
@@ -307,13 +305,18 @@ section {
     color: var(--secondary-color-1);
 }
 
+.more {
+    margin-top: auto;
+    display: block;
+}
+
 .main-text {
     color: var(--secondary-color-2);
     font-family: "Roboto", sans-serif;
     font-size: 3vh;
 }
 
-.sub-text, .project-link{
+.sub-text, .project-link, .link-button{
     color: var(--secondary-color-3);
     font-family: "Roboto", sans-serif;
     font-size: 2vh;
@@ -373,7 +376,8 @@ footer {
 
 .contacts {
     justify-content: left;
-    padding-bottom: 10em;
+    padding: 10em 0 10em 0;
+    max-width: 100%;
 }
 
 .contacts p {
@@ -381,7 +385,7 @@ footer {
 }
 
 .contacts a:hover {
-    color: var(--accent-color);
+    color: var(--secondary-color-1);
 }
 .contacts a {
     display: flex;
@@ -411,4 +415,26 @@ a {
 
 .hidden {
     display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0f0f0f;
+    padding: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color-3);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color-2);
 }
