@@ -383,7 +383,6 @@ footer {
     background-color: var(--primary-color-1);
     text-align: center;
     margin: 0;
-
 }
 
 #contacts-section {
@@ -417,9 +416,9 @@ footer {
     margin: 0.5em;
 }
 
-.contacts .contact-link {
+/* .contacts .contact-link {
     justify-content: left;
-}
+} */
 
 .contact-link img {
     max-width: 30px;
