@@ -392,7 +392,8 @@ footer {
 }
 
 .contacts {
-    justify-content: left;
+    display: flex;
+    flex-direction: column;
     padding: 10em 0 10em 0;
     max-width: 100%;
 }
@@ -404,6 +405,7 @@ footer {
 .contacts a:hover {
     color: var(--secondary-color-1);
 }
+
 .contacts a {
     display: flex;
     flex-direction: row;
@@ -413,6 +415,10 @@ footer {
 
 .contacts a img {
     margin: 0.5em;
+}
+
+.contacts .contact-link {
+    justify-content: left;
 }
 
 .contact-link img {
